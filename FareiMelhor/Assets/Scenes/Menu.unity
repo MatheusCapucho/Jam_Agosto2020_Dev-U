@@ -593,7 +593,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1314246926}
         m_MethodName: SetActive
@@ -604,7 +604,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &190027381
 MonoBehaviour:
@@ -1198,6 +1198,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33fb0ec925faff41ab87a8f1db7fa66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  capuchoIndex: 0
+  cavalcaIndex: 0
+  ikaroIndex: 0
+  flavioIndex: 0
   playerIndex: 1
   maxPlayers: 0
   playerSelectionManager: {fileID: 474081344}

@@ -5,17 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class PlayerSelection : MonoBehaviour
 {
-    public struct Detectives
-{
-    public bool ativo;
-    public int index;
-};
 
-    Detectives capucho, ikaro, cavalca, flavio;
+    public static int capuchoIndex = 0;
+    public static int cavalcaIndex = 0;
+    public static int ikaroIndex = 0;
+    public static int flavioIndex = 0;
 
-    
+
     public int playerIndex = 1;
-    public int maxPlayers;
+    public static int maxPlayers;
     public GameObject playerSelectionManager;
 
 
@@ -34,8 +32,8 @@ public class PlayerSelection : MonoBehaviour
 
     public void ChooseCapucho()
     {
-        capucho.ativo = true;
-        capucho.index = playerIndex;
+        
+        capuchoIndex = playerIndex;
         if (playerIndex == maxPlayers)
         {
             StartGame();
@@ -43,9 +41,8 @@ public class PlayerSelection : MonoBehaviour
         playerIndex++;
     }
     public void ChooseCavalca()
-    {
-        cavalca.ativo = true;
-        cavalca.index = playerIndex;
+    {     
+        cavalcaIndex = playerIndex;
         if (playerIndex == maxPlayers)
         {
             StartGame();
@@ -53,9 +50,8 @@ public class PlayerSelection : MonoBehaviour
         playerIndex++;
     }
     public void ChooseIkaro()
-    {
-        ikaro.ativo = true;
-        ikaro.index = playerIndex;
+    {   
+        ikaroIndex = playerIndex;
         if (playerIndex == maxPlayers)
         {
             StartGame();
@@ -64,8 +60,7 @@ public class PlayerSelection : MonoBehaviour
     }
     public void ChooseFlavio()
     {
-        flavio.ativo = true;
-        flavio.index = playerIndex;
+        flavioIndex = playerIndex;
         if (playerIndex == maxPlayers)
         {
             StartGame();
@@ -76,6 +71,7 @@ public class PlayerSelection : MonoBehaviour
     public void StartGame()
     {
         DontDestroyOnLoad(playerSelectionManager);
-        SceneManager.LoadScene("Principal");
+        SceneManager.LoadScene("Capucho"); // colocar aqui o nome da cena do game
+        playerIndex--;
     }
 }

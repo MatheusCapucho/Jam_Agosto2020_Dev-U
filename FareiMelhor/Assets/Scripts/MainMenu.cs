@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    
+    public void QuitAPP()
+    {
+        Application.Quit();
+    }
 }
